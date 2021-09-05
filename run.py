@@ -48,6 +48,16 @@ def delete_password(acc):
     """
     Password.delete_password(acc)
 
+def password_exists(acc):
+    """
+    It will check whether a password exists
+    Args:
+        acc- the password's account
+    Return:
+        True or False
+    """
+    return Password.password_exist(acc)
+
 
 def main():
     """
