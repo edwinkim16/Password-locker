@@ -130,6 +130,6 @@ def main():
             print("Bye")
             break
 
-
-
+if __name__ == "__main__":
+    main()
 
