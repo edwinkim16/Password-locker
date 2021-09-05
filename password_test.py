@@ -1,2 +1,2 @@
 import unittest  # importing unittest module
-from Password-Locker import Password
+from Password_Locker import Password
