@@ -41,5 +41,16 @@ class TestPassword(unittest.TestCase):
         new_password.save_password()
         self.assertEqual(len(Password.password))      
 
+    def test_display_password(self):
+        """
+        Here it checks weather the display_Password function will return the password in the password list
+        """
+    def save_password(self):
+        self.new_password.save_password()
+        new_pass = Password("facebook", "2021")
+        new_pass.save_password()
+        self.assertEqual(len(Password.password),
+                         len(Password.display_passwords()))    
+
 if __name__ == "__main__":
     unittest.main()
