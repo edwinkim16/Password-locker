@@ -26,5 +26,20 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(self.new_password.username, "edwin")
         self.assertEqual(self.new_password.password, "2021") 
 
+    def test_save_new_password(self):
+        """
+        Here it will check weather the new password is added in the list
+        """
+        self.new_password.save_password()
+        self.assertEqual(len(Password.password_list), 1)  
+
+    def test_add_generate_password(self):
+        """
+        This will check if the new password added to the list
+        """
+        new_password = Password("facebook", "2021", Password.generate_(6))
+        new_password.save_password()
+        self.assertEqual(len(Password.password))      
+
 if __name__ == "__main__":
     unittest.main()
