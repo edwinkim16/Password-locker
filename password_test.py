@@ -50,7 +50,24 @@ class TestPassword(unittest.TestCase):
         new_pass = Password("facebook", "2021")
         new_pass.save_password()
         self.assertEqual(len(Password.password),
-                         len(Password.display_passwords()))    
+                         len(Password.display_passwords()))   
+
+    def test_delete(self):
+        """
+        This test will check whether the password gets deleted from the passwords list
+        """
+        self.new_password.save_password()
+        new_password = Password("facebook", "2021")
+        new_password.save_password()
+        Password.delete_password("instagram")
+        self.assertEqual(len(Password.password_list), 1)
+
+    def test_password_exist(self):
+        """
+        This will check whether the password_exists function works
+        """
+        self.new_password.save_password()
+        self.assertTrue(Password.password_exist("instagram"))                      
 
 if __name__ == "__main__":
     unittest.main()
