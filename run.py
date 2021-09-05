@@ -62,6 +62,9 @@ def password_exists(acc):
 def main():
     """
     This is where the user will run all their functions
-    """    
+    """   
+    print("\n")
+    print("Welcome to PASSWORD LOCKER. We help you manage your passwords so that you can worry about things that matter\n")
+    print("-"*6, "SIGN UP", "-"*6, "\n") 
 
 
