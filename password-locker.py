@@ -37,4 +37,19 @@ class Password:
         Password.password_list.remove(self)
         # for password in password_list:
         #     if password.account.lower() == account.lower():
-        #         cls.password_list.remove(password)        
+        #         cls.password_list.remove(password)
+
+    @classmethod
+    def password_exist(cls, account):
+        """
+        This function checks weather the password of the account exist
+        Args:
+            acc- this is the acount which user wants to confirm if its password exist
+        return:
+            True or False
+        """
+        for password in cls.password_list:
+            if password.account.lower() == account.lower():
+                return True
+
+            return False            
