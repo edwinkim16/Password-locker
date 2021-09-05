@@ -19,4 +19,10 @@ class Password:
         """
         This function will add users password to the password array
         """
-        Password.password_list.append(self)    
+        Password.password_list.append(self) 
+
+    def display_passwords(self):
+        """
+        This function returns all passwords on the list
+        """
+        return self.password_list       
