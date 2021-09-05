@@ -70,5 +70,12 @@ def main():
     user_name = input("User Name\n")
     user_pass = getpass.getpass('Password:\n')
 
+    # new_user(login,password)
+
+    print(f"Welcome {user_name}\n")
+
+    print("What would you like to do?\n")
+
+
 
 
