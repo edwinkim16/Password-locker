@@ -25,4 +25,16 @@ class Password:
         """
         This function returns all passwords on the list
         """
-        return self.password_list       
+        return self.password_list   
+
+    @classmethod
+    def delete_password(self):
+        """
+        This function will delete the users password in the list
+        Args:
+            this is the account of the password the user wants to delete
+        """
+        Password.password_list.remove(self)
+        # for password in password_list:
+        #     if password.account.lower() == account.lower():
+        #         cls.password_list.remove(password)        
