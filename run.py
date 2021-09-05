@@ -15,6 +15,26 @@ def new_user(login, password):
     user = User(login, password)
     return user
 
+def add_password(password):
+    """
+    This is a function that will add a new password to the passwords list
+    """
+    
+    Password.save_password(password)
+
+
+def generate_password(length):
+    """
+    This will create a random password for the user
+    Args:
+        length - the user's preferred length for the password
+    Return:
+        It will return a random password of user's preferred length
+    """
+    return Password.generate_pass(length)
+
+
+
 def main():
     """
     This is where the user will run all their functions
