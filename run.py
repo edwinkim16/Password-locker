@@ -33,6 +33,20 @@ def generate_password(length):
     """
     return Password.generate_pass(length)
 
+def view_passwords():
+    """
+    A function that will allow the user to view all the passwords
+    """
+    return Password.display_passwords()
+
+
+def delete_password(acc):
+    """
+    This is a function that will delete the password
+    Args:
+        acc - the acc of the pass the user wants to delete
+    """
+    Password.delete_password(acc)
 
 
 def main():
