@@ -16,7 +16,15 @@ class TestPassword(unittest.TestCase):
         """
         Here will be clearing password after every test to avoid confusion
         """
-        Password.password = []    
+        Password.password = []   
+
+    def test_new_pass(self):
+        """
+        Here will test if a new password is initiated correctly
+        """
+        self.assertEqual(self.new_password.account, "twitter")
+        self.assertEqual(self.new_password.username, "edwin")
+        self.assertEqual(self.new_password.password, "2021") 
 
 if __name__ == "__main__":
     unittest.main()
