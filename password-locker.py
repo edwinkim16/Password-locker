@@ -14,3 +14,9 @@ class Password:
         self.account = account
         self.username = username
         self.password = password
+
+    def save_password(self):
+        """
+        This function will add users password to the password array
+        """
+        Password.password_list.append(self)    
