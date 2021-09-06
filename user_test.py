@@ -13,7 +13,7 @@ class TestUser(unittest.TestCase):
 
     def test_init(self):
         '''
-        This will validate whetehr the user is correctly registered
+        This will validate whether the user is correctly registered
         '''
         self.assertEqual(self.new_user.login,"edwin")
         self.assertEqual(self.new_user.password,"1998")

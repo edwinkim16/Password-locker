@@ -12,6 +12,15 @@ class TestPassword(unittest.TestCase):
         """
         self.new_password = Password("twitter", "edwin", "2021")
 
+    def test_init(self):
+        '''
+        test_init test case to test if the object is initialized properly
+        '''
+
+        self.assertEqual(self.new_password.account,"twitter")
+        self.assertEqual(self.new_password.username,"edwin")
+        self.assertEqual(self.new_password.password,"2021")    
+
     def tearDown(self):
         """
         Here will be clearing password after every test to avoid confusion

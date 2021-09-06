@@ -7,7 +7,7 @@ class Password:
     """
     password_list = []  # list to store user  passwords
 
-    def _init_(self, account, username, password):
+    def __init__(self, account, username, password):
         """
         Allow the user to create instances of the class with unique details 
         """
